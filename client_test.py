@@ -23,8 +23,13 @@ class ClientTest(unittest.TestCase):
 
 
   """ ------------ Add more unit tests ------------ """
+  def test_getRatio_numberIsNotZeroAtDenominator():
+  self.assertEqual( getRatio(price_a,price_b), (price_a / price_b))
 
+#when price_b is zero
 
+ def test_getRatio_numberIsZeroAtDenominator():
+  self.assertIsNone( getRatio(price_a,price_b))
 
 if __name__ == '__main__':
     unittest.main()
